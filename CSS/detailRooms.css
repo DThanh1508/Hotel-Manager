@@ -1,0 +1,212 @@
+.fa-cart-arrow-down{
+    font-size: 178%;
+}
+
+.overflow{
+    width: 305px;
+    height: 500px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.padding{
+    padding: 5%;
+}
+
+.avatar{
+    width: 80px!important;
+    height: 80px!important;
+}
+
+#map{
+    position: relative;
+    width:305px!important;
+    height:150px;
+}
+#display{
+    position: absolute;
+    transform: translate(-140%,150%);
+}
+
+.margin-top{
+    margin-top: 5%;
+}
+.margin-10{
+    margin-top: 10%;
+}
+
+#Highlights{
+    border: 1px solid black;
+    background-color: rgb(211, 229, 247);
+}
+
+#icons i{
+    font-size: 200%;
+}
+
+.fa-star {
+    color: #ffc400
+}
+
+.col-3 img{
+    width: 90%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.size-icons{
+    font-size: 200%;
+}
+
+.convenient{
+    margin-top: 11px;
+}
+
+/* ---------------------------- */
+.service
+{
+    margin-top: 20px;
+    display: flex;
+}
+.right-bottom
+{
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    border: 1px solid red;
+}
+.check-room
+{
+    margin-top: 20px;
+}
+.check-room .title
+{
+    display: flex;
+}
+.title a
+{
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: auto;
+    color: black;
+}
+.check-room-box
+{
+    padding: 10px;
+    width: 100%;
+    background-color: #ffe08a;
+    border: 1px solid red;
+    border-left: none;
+    border-right: none;
+}
+.check-room-boxs
+{
+    margin: 10px 0 10px 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.check-room-box-left
+{
+    height: 100%;
+    width: 33%;
+    /* background-color: #febb02; */
+}
+.check-room-box-left ion-icon
+{
+    background-color: #fff;
+}
+.check-room-box-center ion-icon
+{
+    background-color: #fff;
+}
+select
+{
+    outline: none;
+}
+.check-room-box-center
+{
+    height: 100%;
+    width: 33%;
+    /* background-color: #003580; */
+}
+.check-room-box-right
+{
+    height: 100%;
+    width: 34%;
+    /* background-color: black; */
+}
+.check-room-box-right button
+{
+    padding: 5px;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(24, 24, 175);
+}
+.form
+{
+    padding: 5px;
+}
+.roomAndPerson
+{
+    margin-top: 20px;
+    display: flex;
+}
+.one
+{
+    margin-left: 30px;
+}
+
+#payDay{
+    display: none;
+}
+
+#commends {
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 1rem;
+}
+
+#leave-commend {
+    text-align: center;
+}
+
+#submit-commend {
+    margin-top: 1rem;
+}
+
+cite {
+    display: flex
+}
+
+.name-cmt {
+    font-style: italic;
+    margin: auto;
+    font-weight: 800;
+}
+
+.exit{
+    position: fixed;
+    top: 200px;
+    left:40px;
+}
+
+.progress{
+    height: 20px;
+}
+
+.border{
+    border-radius: 0 !important;
+    width: 421.5px !important;
+    border: none !important;
+}
+
+#id_qrcode{
+    margin: 130px;
+}
+

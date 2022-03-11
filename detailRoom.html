@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./CSS/style_homepage.css" />
+    <link rel="stylesheet" href="./CSS/detailRooms.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="./JS/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="header" id="hearder">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Option</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-bs-toggle="modal"
+                    data-bs-target="#currency">
+                    Chọn loại tiền tệ của bạn
+                </button>
+                <button type="button" class="btn btn-lg btn-outline-dark" data-bs-toggle="modal"
+                    data-bs-target="#Country">
+                    Chọn loại ngôn ngữ của bạn
+                </button>
+                <button type="button" class="btn btn-lg btn-outline-dark">
+                    Liên hệ dịch vụ Khách hàng
+                </button>
+                <button type="button" class="btn btn-lg btn-outline-dark">
+                    Đăng chỗ nghỉ của Quý vị
+                </button>
+                <button id="accountMangement" type="button" class="btn btn-lg btn-outline-dark"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas_account_mangement"
+                    aria-controls="offcanvasTop">
+                    Quản lý tài khoản
+                </button>
+                <button id="roomMangement" type="button" class="btn btn-lg btn-outline-dark">
+                    Đơn đặt phòng
+                </button>
+            </div>
+        </div>
+        <header class="navbar navbar-expand-xl navabar-dark">
+            <div class="container">
+                <a href="child_site.html" class="navbar-brand">
+                    <h1 class="text-white logo">Booking.com</h1>
+                </a>
+                <div class="collapse navbar-collapse" id="idmenu">
+                    <ul class="navbar-nav m-sm-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                data-bs-dismiss="tooltip" title="Chọn loại tiền tệ của bạn">
+                                <button type="button" class="btn btn-lg text-white
+                                        background-color" data-bs-toggle="modal" data-bs-target="#currency" style="font-size: 160%; font-weight:
+                                        500">
+                                    VND
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                data-bs-dismiss="tooltip" title="Chọn ngôn ngữ của bạn">
+                                <button type="button" class="btn btn-lg text-white
+                                        background-color" data-bs-toggle="modal" data-bs-target="#Country"
+                                    style="margin-top: 2px">
+                                    <img class="country" src="./Img/Vietnam.png" alt="Country" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Liên hệ Dịch vụ Khách hàng">
+                                <button type="button" class="btn btn btn-lg text-white
+                                        background-color" style="margin-top: 3px; padding: 7px">
+                                    <i class="far fa-question-circle"data-bs-toggle="modal" data-bs-target="#support"></i>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="postPlace" class="nav-link"><button type="button" class="btn btn-lg
+                                        btn-outline-light
+                                        text-white
+                                        background-color
+                                        margin">
+                                    Đăng chỗ nghỉ của Quý vị
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="accountManagement" class="nav-link text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tài Khoảng">
+                                <button type="button" class="btn btn-lg text-white background-color" style="margin-top: 2px">
+                                    <i class="far fa-user-circle" data-bs-toggle="offcanvas"  data-bs-target="#offcanvas_account_mangement" aria-controls="offcanvasTop"></i>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="cartPing" class="nav-link text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đơn Đặt phòng">
+                                <button type="button" class="btn btn-lg text-white background-color" style="margin-top: 2px">
+                                    <i class="fas fa-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#listBookRooms">
+                                        <span id="quantity" class="position-absolute translate-middle badge rounded-pill bg-danger text-white">
+                                            0
+                                        </span>
+                                    </i>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn btn-primary menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 margin-top">
+                <h3>Bình Luận:</h3>
+                <div class="overflow">
+                    <div class="padding" id="box-cmt">
+
+                    </div>
+                </div>
+                <div id="commends">
+                    <h6 id="leave-commend">ĐỂ LẠI ĐÁNH GIÁ CỦA BẠN TẠI ĐÂY
+                    </h6>
+                    <form>
+                        <div class="form-group">
+                            <label>Tên bạn muốn hiển thị:</label>
+                            <input type="email" class="form-control" id="tenhienthi" placeholder="Nhập tên" name="tenhienthi">
+                        </div>
+                        <div class="form-group">
+                            <label>Avatar của bạn (nếu thích):</label>
+                            <input type="text" class="form-control" id="avatarcmt" placeholder="Chèn link ảnh của bạn tại đây" name="avatarcmt">
+                        </div>
+                        <div class="form-group">
+                            <label>Đánh giá của bạn: </label>
+                            <textarea class="form-control" id="commend" rows="3" placeholder="Đánh giá của bạn"></textarea>
+                        </div>
+                        <button type="submit" onclick="addcomments()" class="btn btn-primary" id="submit-commend">Submit</button>
+                    </form>
+                </div>
+                <div class="text-center margin-10">
+                    <img id="map" src="./Img/background.PNG" alt="Map">
+                    <button id="display" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-map">
+                        Hiển thị trên bản đồ
+                    </button>
+                </div>
+                <div id="Highlights" class="margin-10">
+                    <div class="padding">
+                        <h5>Điểm nổi bật của chỗ nghỉ</h5>
+                        <h6>Nhận được những gì bạn cần</h6>
+                        <p>Nếu bạn có câu hỏi sau khi đặt phòng, chỗ nghỉ này trả lời khá nhanh.</p>
+                        <div class="row">
+                            <div class="col-4" id="icons">
+                                <br>
+                                <i class="fas fa-heart"></i>
+                                <br><br><br><br><br>
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="col-8">
+                                <p>Nằm ngay trung tâm Prague, chỗ nghỉ này có điểm vị trí tuyệt vời - 9,8. <br> <br> Bạn muốn có một giấc ngủ thật ngon? Chỗ nghỉ này được đánh giá cao nhờ những chiếc giường thoải mái.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 margin-top">
+                <div id="room">
+
+                </div>
+                <div class="convenient">
+                    <div class="row">
+                        <div class="col-3 text-center">
+                            <i class="fas fa-sink size-icons"></i>
+                            <p><b>Phòng vệ sinh</b></p>
+                        </div>
+                        <div class="col-3 text-center">
+                            <i class="fas fa-eye size-icons"></i>
+                            <p><b>Tầm nhìn</b></p>
+                        </div>
+                        <div class="col-3 text-center">
+                            <i class="fas fa-wifi size-icons"></i>
+                            <p><b>Wifi miễn phí</b></p>
+                        </div>
+                        <div class="col-3 text-center">
+                            <i class="fas fa-swimming-pool size-icons"></i>
+                            <p><b>Hồ bơi</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="check-room">
+                    <div class="title">
+                        <h2>Phòng trống</h2>
+                        <a href=""><ion-icon name="checkmark-done-outline"></ion-icon> Chúng Tôi Luôn Khớp Giá!</a>
+                    </div>
+                    <div class="check-room-box">
+                        <span style="font-size: larger;">Bạn muốn nghỉ tại Flora Chiado Apartments vào lúc nào?</span>
+                        <div class="check-room-boxs">
+                            <div class="check-room-box-left">
+                                <span style="font-weight: 700;">Ngày nhận phòng</span>
+                            </div>
+                            <div class="check-room-box-center">
+                                <span style="font-weight: 700;">Ngày trả phòng</span>
+                            </div>
+                            <div class="check-room-box-right">
+                            </div>
+                        </div>
+                        <div class="check-room-boxs">
+                            <div class="check-room-box-left">
+                                <div class="input-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+                                    <select class="form">
+                                        <option selected>Ngày nhận phòng</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="check-room-box-center">
+                                <div class="input-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+                                    <select class="form">
+                                        <option selected>Ngày trả phòng</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="check-room-box-right">
+                                <button>Kiểm tra phòng trống</button>
+                            </div>
+                        </div>
+                        <div class="roomAndPerson">
+                            <div class="one-l">
+                                Phòng
+                                <select class="form-l">
+                                    <option selected>1</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                </select>
+                            </div>
+                            <div class="one">
+                                Người lớn
+                                <select class="form-r">
+                                    <option selected>1</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                </select>
+                            </div>
+                            <div class="one">
+                                Trẻ em
+                                <select class="form-r">
+                                    <option selected>1</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-top">
+                    <div class="col-4">
+                        <p><b><big>Nhân viên phục vụ</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">9.2</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <p><b><big>Tiện nghi</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">9.8</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <p><b><big>Thoải mái</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">9.8</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <p><b><big>Sạch sẽ</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">9.0</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <p><b><big>Wifi miễn phí</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">10</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <p><b><big>Đáng giá tiền</big></b></p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 98%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">9.8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-top"></div>
+    <div class="container">
+        <footer id="footer-bottom">
+        </footer>
+    </div>
+    <section id="modal"></section>
+    <!-- -------------------------------------------------------map----------------------------------------------------- -->
+    <div class="modal fade" id="modal-map" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 635px; width: 100%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-mapLabel">Bản đồ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58785.7916051872!2d-43.23482059206225!3d-22.946102907793616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1638093119981!5m2!1svi!2s" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------Booking Room----------------------------------------------------- -->
+  <div class="modal fade" id="bookingRoom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header header text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Booking Room</h5>
+          <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="far fa-times-circle" style="font-size: 150%;"></i></button>
+        </div>
+        <div class="modal-body" style="background-color: rgb(255, 196, 0);">
+            <div class="search-room">
+                <form>
+                    <div id="inforRoom"></div>
+                    <p>Ngày nhận phòng:</p>
+                    <div class="search-content-item input-group flex-nowrap">
+                        <span class="input-group-text addon-wrapping" id="addon-wrapping"><i class="far fa-calendar-alt"></i></span>
+                        <input onclick="received_date()" id="received-date" type="text" class="form-control" placeholder="Ngày nhận phòng" />
+                        <button onclick="ok()" type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Nhấn 'ok' để nhập ngày trả">ok</button>
+                    </div>
+                    <div id="payDay">
+                        <p>Ngày trả phòng:</p>
+                        <div class="search-content-item input-group flex-nowrap">
+                            <span class="input-group-text addon-wrapping" id="addon-wrapping"><i class="far fa-calendar-times"></i></span>
+                            <input id="pay-day" type="text" class="form-control" placeholder="Ngày trả phòng" />
+                        </div>
+                    </div>
+                    <p>Số người và phòng:</p>
+                    <div class="search-content-item input-group flex-nowrap">
+                        <span class="input-group-text addon-wrapping" id="addon-wrapping"><i class="fas fa-users"></i></span>
+                        <input type="value" class="number-people form-control" value="1 người lớn" />
+                        <input type="value" class="number-children form-control" value="0 trẻ em" />
+                        <input type="value" class="number-room form-control" value="1 phòng" />
+                        <div class="number-box">
+                            <li id="numer-people">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="number-left">
+                                            <p>Người lớn</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="number-right adults">
+                                            <button type="button" class="btn btn-outline-primary adultsMinus">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <span class="number">1</span>
+                                            <button type="button" class="btn btn-outline-primary adultsPlus">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="number-left">
+                                            <p>Trẻ em <br />0 - 17
+                                                tuổi</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="number-right children">
+                                            <button type="button" class="btn btn-outline-primary childrenMinus">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <span class="number">0</span>
+                                            <button type="button" class="btn btn-outline-primary childrenPlus">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="number-left">
+                                            <p>Phòng</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="number-right room">
+                                            <button type="button" class="btn btn-outline-primary roomMinus">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <span class="number">1</span>
+                                            <button type="button" class="btn btn-outline-primary roomPlus">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">
+                                    Thoát
+                                </button>
+                                <button type="button" class="btn btn-primary agree">
+                                    Đồng ý
+                                </button>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <p>Chọn hình thức thanh toán</p>
+                    </div>
+                    <select id="payment" class="form-select" aria-label="Default select example">
+                        <option value="Thanh toán khi nhận phòng">Thanh toán khi nhận phòng</option>
+                        <option value="Thanh toán bằng thẻ ngân hàng">Thanh toán bằng thẻ ngân hàng</option>
+                        <option value="Thanh toán qua ZaloPay">Thanh toán qua ZaloPay</option>
+                        <option value="Thanh toán qua Momo">Thanh toán qua Momo</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="cancel()" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" onclick="book()" class="btn btn-primary">Đặt phòng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------------------------modal---------------------------------- -->
+  <div class="modal fade" id="qrcodemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Quét Mã QR để thanh toán:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <p>
+                <div id="id_qrcode"></div>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- -----------------------JS--------------------------------------------- -->
+    <script src="./JS/tooltips.js"></script>
+    <script src="./JS/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        const start = new Date();
+        start.setDate(start.getDate() + 1);
+        flatpickr("#received-date", {
+            minDate: start,
+        });
+        function received_date(){
+            document.getElementById('payDay').style.display='none';
+            document.getElementById('pay-day').value='';
+        };
+    </script>
+    <script>
+        function ok(){
+            document.getElementById('payDay').style.display='block';
+            var day = document.getElementById('received-date').value;
+            const start = new Date(day);
+            start.setDate(start.getDate() + 1)
+            flatpickr("#pay-day", {
+            minDate: start,
+            });
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./JS/bookRooms.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/hearder.js"></script>
+    <script src="./JS/cookieUser.js"></script>
+    <script src="./JS/comment.js"></script>
+    <script src="./JS/cartping.js"></script>
+    <script src="./JS/email.js"></script>
+</body>
+</html>

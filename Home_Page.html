@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/style_homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Option</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-bs-toggle="modal" data-bs-target="#currency">Chọn loại tiền tệ của bạn</button>
+                <button type="button" class="btn btn-lg btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Country">Chọn loại ngôn ngữ của bạn</button>
+                <button type="button" class="btn btn-lg btn-outline-dark">Liên hệ dịch vụ Khách hàng</button>
+                <button type="button" class="btn btn-lg btn-outline-dark">Đăng chỗ nghỉ của Quý vị</button>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-light btn-lg log margin" data-bs-toggle="modal" data-bs-target="#sign-up">
+                Đăng ký
+            </button>
+            <button type="button" class="btn btn-outline-primary btn-light btn-lg  log margin" data-bs-toggle="modal" data-bs-target="#log_in">
+                Đăng nhập
+            </button>
+        </div>
+        <header class="navbar navbar-expand-xl navabar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <h1 class="text-white logo">Booking.com</h1>
+                </a>
+                <div class="collapse navbar-collapse" id="idmenu">
+                    <ul class="navbar-nav m-sm-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-dismiss="tooltip" title="Chọn loại tiền tệ của bạn">
+                                <button type="button" class="btn btn-lg text-white background-color" data-bs-toggle="modal" data-bs-target="#currency" style="font-size: 160%;font-weight: 500;">
+                                    VND
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-dismiss="tooltip" title="Chọn ngôn ngữ của bạn">
+                                <button type="button" class="btn btn-lg text-white background-color" data-bs-toggle="modal" data-bs-target="#Country" style="margin-top: 2px;">
+                                    <img class="country " src="./Img/Vietnam.png" alt="Country ">
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Liên hệ Dịch vụ Khách hàng">
+                                <button type="button" class="btn btn btn-lg text-white background-color" style="margin-top: 3px; padding: 7px;">
+                                    <i class="far fa-question-circle "></i>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link "><button type="button " class="btn btn-lg btn-outline-light text-white background-color margin">Đăng chỗ nghỉ của Quý vị</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link ">
+                                <button type="button" class="btn btn-light btn-lg text-primary log margin" data-bs-toggle="modal" data-bs-target="#sign-up">
+                                    Đăng ký
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link ">
+                                <button type="button" class="btn btn-light btn-lg text-primary log margin" data-bs-toggle="modal" data-bs-target="#log_in">
+                                    Đăng nhập
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn btn-primary menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-bars"></i></button>
+        </header>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu Service</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-bed"></i> Lưu Trú</a>
+                    </li>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-plane-departure"></i> Chuyến bay</a>
+                    </li>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-hotel"></i> Chuyến bay + Khách sạn</a>
+                    </li>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-car"></i> Thuê xe</a>
+                    </li>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-route"></i> Địa điểm tham quan</a>
+                    </li>
+                    <li class="nav-item-service ">
+                        <a href="#" class="nav-link "><i class="fas fa-taxi"></i> Taxi sân bay</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="Main_menu navbar navbar-expand-xl navabar-dark">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="mainmenu">
+                    <ul class="navbar-nav m-sm-auto">
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg btn-outline-light text-white button-boder"><i class="fas fa-bed"></i> Lưu Trú</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg text-white button-boder"><i class="fas fa-plane-departure"></i> Chuyến bay</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg text-white button-boder"><i class="fas fa-hotel"></i> Chuyến bay + Khách sạn</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg text-white button-boder"><i class="fas fa-car"></i> Thuê xe</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg text-white button-boder"><i class="fas fa-route"></i> Địa điểm tham quan</button></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#learn " class="nav-link "><button type="button " class="btn btn-lg text-white button-boder"><i class="fas fa-taxi"></i> Taxi sân bay</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn btn-primary menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fas fa-th-large"></i></button>
+        </section>
+    </div>
+    <section class="Searching">
+        <div class="container">
+            <h1>Tìm kiếm ưu đãi khách sạn, chỗ nghỉ dạng nhà ở và nhiều hơn nữa...</h1>
+            <p>Từ những khu nghỉ dưỡng thanh bình đến những căn hộ hạng sang hiện đại</p>
+            <form>
+                <div class="wraper">
+                    <div class="search-content-items">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class=" search-content-item input-group flex-nowrap">
+                                        <span class="input-group-text addon-wrapping" id="addon-wrapping"><i class="fas fa-map-marker-alt"></i></span>
+                                        <input type="text" class="form-control input-search" placeholder="Bạn muốn đến đâu?">
+                                        <span class="input-group-text addon-wrapping" id="addon-wrapping"><button type="button" class="btn-close delete" aria-label="Close"></button></span>
+                                        <div class="autobox">
+                                            <li>Hà Nội</li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class=" search-content-item input-group flex-nowrap">
+                                        <span class="input-group-text addon-wrapping" id="addon-wrapping"><i class="far fa-calendar-alt"></i></span>
+                                        <input id="myID" type=" text " class="form-control " placeholder="Nhận phòng ">
+                                        <span class="input-group-text addon-wrapping" id="addon-wrapping">--</span>
+                                        <input id="myID" type=" text " class="form-control " placeholder="Trả phòng ">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4 ">
+                                    <div class=" search-content-item input-group flex-nowrap ">
+                                        <span class="input-group-text addon-wrapping" id="addon-wrapping "><i class="fas fa-users"></i></span>
+                                        <input type="value" class="number-people form-control" value="1 người lớn">
+                                        <input type="value" class="number-children form-control" value="0 trẻ em">
+                                        <input type="value" class="number-room form-control" value="1 phòng">
+                                        <div class="number-box">
+                                            <li id="numer-people">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="number-left">
+                                                            <p>Người lớn</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <div class="number-right adults">
+                                                            <button type="button" class="btn btn-outline-primary adultsMinus"><i class="fas fa-minus"></i></button>
+                                                            <span class="number">1</span>
+                                                            <button type="button" class="btn btn-outline-primary adultsPlus"><i class="fas fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="number-left">
+                                                            <p>Trẻ em <br>0 - 17 tuổi</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <div class="number-right children">
+                                                            <button type="button" class="btn btn-outline-primary childrenMinus"><i class="fas fa-minus"></i></button>
+                                                            <span class="number">0</span>
+                                                            <button type="button" class="btn btn-outline-primary childrenPlus"><i class="fas fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="number-left">
+                                                            <p>Phòng</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <div class="number-right room">
+                                                            <button type="button" class="btn btn-outline-primary roomMinus"><i class="fas fa-minus"></i></button>
+                                                            <span class="number">1</span>
+                                                            <button type="button" class="btn btn-outline-primary roomPlus"><i class="fas fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button " class="btn btn-secondary close" data-bs-dismiss="modal ">Thoát</button>
+                                                <button type="button " class="btn btn-primary agree">Đồng ý</button>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-2 ">
+                                    <div class=" search-content-item input-group flex-nowrap ">
+                                        <button type="button " class="btn btn-primary ">Tìm Kiếm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="checkbox"> Tôi đi công tác
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="container advice">
+        <i class="fas fa-info-circle"></i>Nhận lời khuyên mà bạn cần. Xem các hạn chế liên quan đến COVID 19 mới nhất trước khi du lịch.
+        <a href="#">Tìm hiểu thêm</a>
+    </div>
+    <div class="container">
+        <section class="baner">
+            <div class="row">
+                <div class="col-6 col-baner1">
+                    <div class="baner1">
+                        <div class="row padding-baner">
+                            <div class="col-3">
+                                <img width="75%" src="./Img/0.jpg" alt="photo">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="title">Ưu Đãi Black Friday</h5>
+                                <div data-bs-toggle="tooltip " data-bs-placement="right " title="xóa baner">
+                                    <button type="button " class="btn-close close-baner1 " aria-label="Close "></button>
+                                </div>
+                                <div class="clearfix "></div>
+                                <p>Ưu đãi 30% chỗ nghỉ toàn cầu – bạn đã chọn điểm đến chưa?</p>
+                                <button type="button " class="btn btn-outline-primary "><h4>Tìm ưu đãi</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-baner2 ">
+                    <div class="baner2 ">
+                        <div class="row padding-baner ">
+                            <div class="col-3 ">
+                                <img width="75% " src="./Img/1.jpg " alt="photo ">
+                            </div>
+                            <div class="col-9 ">
+                                <h5 class="title ">Ưu Đãi Black Friday</h5>
+                                <div data-bs-toggle="tooltip " data-bs-placement="right " title="xóa baner">
+                                    <button type="button " class="btn-close close-baner2 " aria-label="Close "></button>
+                                </div>
+                                <div class="clearfix "></div>
+                                <p>Ưu đãi 30% chỗ nghỉ toàn cầu – bạn đã chọn điểm đến chưa?</p>
+                                <button type="button " class="btn btn-outline-primary "><h4>Tìm ưu đãi</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="service ">
+            <h2>Tìm theo loại chỗ nghỉ</h2>
+            <div class="row center">
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/3.jpg" alt="">
+                    <h5>Căn hộ</h5>
+                    <p>724,443 căn hộ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/4.jpg" alt="">
+                    <h5>Resort</h5>
+                    <p>17,285 resort</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/6.jpg" alt="">
+                    <h5>Nhà gỗ</h5>
+                    <p>30,964 nhà gỗ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/7.jpg" alt="">
+                    <h5>Nhà nghỉ thôn dã</h5>
+                    <p>129,972 nhà nghỉ thôn dã</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/8.jpg" alt="">
+                    <h5>Glamping</h5>
+                    <p>8,919 địa điểm glamping</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/9.jpg" alt="">
+                    <h5>Khách sạn căn hộ</h5>
+                    <p>30,046 khách sạn căn hộ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/11.jpg" alt="">
+                    <h5>Nhà khách</h5>
+                    <p>101,205 nhà khách</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/13.jpg" alt="">
+                    <h5>Nhà nghỉ ven đường</h5>
+                    <p>13,136 nhà nghỉ ven đường</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/14.jpg" alt="">
+                    <h5>Nhà nghỉ B&B</h5>
+                    <p>182,834 nhà nghỉ B&B</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/15.jpg" alt="">
+                    <h5>Ryokan</h5>
+                    <p>2,198 ryokan</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/16.jpg" alt="">
+                    <h5>Riad</h5>
+                    <p>1,144 riad</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/18.jpg" alt="">
+                    <h5>Chỗ nghỉ nhà dân</h5>
+                    <p>131,022 chỗ nghỉ nhà dân</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/19.jpg" alt="">
+                    <h5>Khu cắm trại</h5>
+                    <p>6,253 khu cắm trại</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/20.jpg" alt="">
+                    <h5>Nhà nghỉ nông thôn</h5>
+                    <p>11,411 nhà nghỉ nông thôn</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/21.jpg" alt="">
+                    <h5>Nhà nghỉ trang trại</h5>
+                    <p>9,207 nhà nghỉ trang trại</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/22.jpg" alt="">
+                    <h5>Nhà thuyền</h5>
+                    <p>1,186 nhà thuyền</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/23.jpg" alt="">
+                    <h5>Lều trại sang trọng</h5>
+                    <p>2,986 lều trại sang trọng</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/24.jpg" alt="">
+                    <h5>Khách sạn tự phục vụ</h5>
+                    <p>646,789 khách sạn tự phục vụ</p>
+                </div>
+            </div>
+        </section>
+        <section class="prominent-place">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="carousel-item active">
+                        <img src="./Img/dalat1.PNG" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Đà Lạt</h1>
+                            <p>2,144 chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="carousel-item active">
+                        <img src="./Img/danang.PNG" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Đà Năng</h1>
+                            <p>2,510 chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="carousel-item active">
+                        <img src="./Img/dalat.PNG" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>TP.Hồ Chí Minh</h1>
+                            <p>5,604 chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="carousel-item active">
+                        <img src="./Img/nhatrang.PNG" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Nha Trang</h1>
+                            <p>1,658 chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="carousel-item active">
+                        <img src="./Img/hanoi.PNG" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Hà Nội</h1>
+                            <p>3,802 chỗ ở</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="service">
+            <h2>Khám phá Việt Nam</h2>
+            <p>Các điểm đến phổ biến này có nhiều điều chờ đón bạn</p>
+            <div class="row center">
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.1.webp" alt="">
+                    <h5>Đà Lạt</h5>
+                    <p>2,144 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.2.webp" alt="">
+                    <h5>Vũng Tàu</h5>
+                    <p>1,821 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.3.webp" alt="">
+                    <h5>TP. Hồ Chí Minh</h5>
+                    <p>5,605 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.4.webp" alt="">
+                    <h5>Hà Nội</h5>
+                    <p>3,802 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.5.webp" alt="">
+                    <h5>Phú Quốc</h5>
+                    <p>673 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.6.webp" alt="">
+                    <h5>Đà Nẵng</h5>
+                    <p>2,508 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.7.webp" alt="">
+                    <h5>Nha Trang</h5>
+                    <p>1,658 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.8.webp" alt="">
+                    <h5>Sa Pa</h5>
+                    <p>443 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.9.webp" alt="">
+                    <h5>Ho Tram</h5>
+                    <p>16 chỗ nghỉ</p>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items1" src="./Img/2.10.webp" alt="">
+                    <h5>Hội An</h5>
+                    <p>1,007 chỗ nghỉ</p>
+                </div>
+            </div>
+        </section>
+        <section class="baner">
+            <div class="row padding-baner baner3">
+                <div class="col-3">
+                    <img class="genius" width="75%" src="./Img/genius.png" alt="photo">
+                </div>
+                <div class="col-9">
+                    <h5 class="title3">Nhận giảm giá tức thì</h5>
+                    <p>Chỉ cần đăng nhập tài khoản của bạn và tìm logo Genius <br> màu xanh dương để tiết kiệm</p>
+                    <button type="button" class="btn btn-outline-primary text-primary hoverbutton margin" data-bs-toggle="modal" data-bs-target="#sign-up">
+                        Đăng ký
+                    </button>
+                    <button type="button" class="btn text-primary hoverbutton margin" data-bs-toggle="modal" data-bs-target="#log_in">
+                        Đăng nhập
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="favorite ">
+            <h2 class="margin-h1">Nhà ở mà khách yêu thích</h2>
+            <div class="row center">
+                <div class="col-1 padding-items">
+                    <div class="carousel-item active">
+                        <img src="./Img/view.PNG" class="d-block w-100 size" alt="">
+                        <div class="carousel-caption d-none d-md-block text">
+                            <p>Chúng tôi còn nhiều nhà và căn hộ mà chúng tôi nghĩ rằng bạn sẽ thích!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/4.2.jpg" alt="">
+                    <p class="margin-p">Appartamento Benincampi Roma</p>
+                    <h5>Giá từ SEK 1.957</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-xl-2">
+                            <button type="button" class="btn btn-primary color"><h5>9,7</h5></button>
+                        </div>
+                        <div class=" col-lg-7 col-xl-3 margin-h6">
+                            <h6>Xuất sắc</h6>
+                        </div>
+                        <div class=" col-xl-7 margin-h6">
+                            <p>- 72 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/4.3.jpg" alt="">
+                    <p class="margin-p">Apartments on Belinskogo</p>
+                    <h5>Giá từ SEK 2.650</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-xl-2">
+                            <button type="button" class="btn btn-primary color"><h5>9,7</h5></button>
+                        </div>
+                        <div class="col-lg-7 col-xl-3 margin-h6">
+                            <h6>Xuất sắc</h6>
+                        </div>
+                        <div class="col-xl-7 margin-h6">
+                            <p>- 28 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/4.4.jpg" alt="">
+                    <p class="margin-p">Villa Rock Barcelona</p>
+                    <h5>Giá từ SEK 26.260</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-xl-2">
+                            <button type="button" class="btn btn-primary color"><h5>9,3</h5></button>
+                        </div>
+                        <div class="col-lg-7 col-xl-3 margin-h6">
+                            <h6>Tuyệt hảo</h6>
+                        </div>
+                        <div class="col-xl-7 margin-h6">
+                            <p>- 18 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/mới.PNG" alt="">
+                    <p class="margin-p">Hyde Park Residence London</p>
+                    <h5>Giá từ SEK 54.473</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-xl-2">
+                            <button type="button" class="btn btn-primary color"><h5>9,8</h5></button>
+                        </div>
+                        <div class="col-lg-7 col-xl-3 margin-h6">
+                            <h6>Xuất sắc</h6>
+                        </div>
+                        <div class="col-xl-7 margin-h6">
+                            <p>- 9 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 padding-items">
+                    <img class="items" src="./Img/family.PNG" alt="">
+                    <p class="margin-p">Villa Rock Barcelona</p>
+                    <h5>Giá từ SEK 26.260</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-xl-2">
+                            <button type="button" class="btn btn-primary color"><h5>9,3</h5></button>
+                        </div>
+                        <div class="col-lg-7 col-xl-3 margin-h6">
+                            <h6>Tuyệt hảo</h6>
+                        </div>
+                        <div class="col-xl-7 margin-h6">
+                            <p>- 18 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="favorite">
+            <h2 class="margin-h1">Các điểm đến được chúng tôi ưa thích</h2>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-2 col-xxl-2">
+                    <button type="button" class="btn btn-lg btn-outline-primary text-primary hoverbutton ">
+                        khu vực
+                    </button>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2 col-xxl-2">
+                    <button type="button" class="btn btn-lg text-primary hoverbutton ">
+                        thành phố
+                    </button>
+                </div>
+                <div class=" col-sm-5 col-md-5 col-lg-4 col-xxl-3">
+                    <button type="button" class="btn btn-lg text-primary hoverbutton" id="margin-top">
+                        Địa điểm được quan tâm
+                    </button>
+                </div>
+                <div class="col-md-2 col-lg-4 col-xxl-5">
+                </div>
+            </div>
+            <div class="row" id="list-address">
+                <div class="col-6 col-md-3">
+                    <div>
+                        <a class="effect" href="#">
+                            Phú Yên
+                        </a>
+                        <p>212 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Bình Thuận
+                        </a>
+                        <p>599 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Cà Mau
+                        </a>
+                        <p>48 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Khu vực TP. Hồ Chí Minh
+                        </a>
+                        <p>5,632 chỗ nghỉ</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <a class="effect" href="#">
+                            Đắc Lắc
+                        </a>
+                        <p>123 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Vĩnh Long
+                        </a>
+                        <p>42 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Thành phố Đà Nẵng
+                        </a>
+                        <p>2,511 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Thanh Hóa
+                        </a>
+                        <p>256 chỗ nghỉ</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <a class="effect" href="#">
+                            Trà Vinh
+                        </a>
+                        <p>17 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Bạc Liêu
+                        </a>
+                        <p>23 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Hà Tĩnh
+                        </a>
+                        <p>37 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Thừa Thiên - Huế
+                        </a>
+                        <p>518 chỗ nghỉ</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <a class="effect" href="#">                          
+                            Bình Dương
+                        </a>
+                        <p>78 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Gia Lai
+                        </a>
+                        <p>86 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Vịnh Hạ Long
+                        </a>
+                        <p>1,369 chỗ nghỉ</p>
+                    </div>
+                    <div>
+                        <a class="effect" href="#">
+                            Quảng Bình
+                        </a>
+                        <p>267 chỗ nghỉ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="log-in-by-email">
+        <div class="container favorite text-center text-white log-by-email">
+            <h2>Tiết kiệm thời gian và tiền bạc!</h2>
+            <p>Hãy đăng ký và chúng tôi sẽ gửi những ưu đãi tốt nhất cho bạn</p>
+            <div>
+                <input type="email " placeholder="Địa chỉ e-mail của bạn " id="email " name="email" class="log-in-email">
+                <button type="button" class="btn btn-primary log-email hoverbutton margin" data-bs-toggle="modal" data-bs-target="#log_in">Đăng nhập</button>
+            </div>
+            <input type="checkbox"> Gửi cho tôi đường dẫn để tải ứng dụng Booking.com MIỄN PHÍ!
+        </div>
+    </section>
+    <section class="header">
+        <div class="container text-center" id="padding">
+            <button type=" button " class="btn btn-lg btn-outline-light text-white background-color margin ">Đăng chỗ nghỉ của Quý vị</button>
+        </div>
+        <hr style="color:white;">
+        <div class="container ">
+            <div class="row " id="list-address ">
+                <div class="col-6 col-md-3 bottom ">
+                    <a href="# " class="text-white ">Phiên bản di động</a>
+                </div>
+                <div class="col-6 col-md-3 bottom ">
+                    <a href="# " class="text-white ">Tài Khoảng của bạn</a>
+                </div>
+                <div class="col-6 col-md-3 bottom ">
+                    <a href="# " class="text-white ">Thay đổi đặt phòng của bạn trực tuyến</a>
+                </div>
+                <div class="col-6 col-md-3 bottom ">
+                    <a class="text-white " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Số tham chiểu của bạn là 'FB285' ">
+                        Liên hệ dịch vụ khách hàng
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 bottom ">
+                    <a class="text-white " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trở thành đối tác phân phối ">
+                        Trở thành đối tác phân phối
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 bottom ">
+                    <a href="# " class="text-white ">Booking.com dành cho Doanh Nghiệp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <footer>
+            <div class="favorite">
+                <div class="row" id="list-address">
+                    <div class="col-6 col-md-3 list-option">
+                        <p>Các quốc gia</p>
+                        <p>Khu vực</p>
+                        <p>Thành phố</p>
+                        <p>Quận</p>
+                        <p>sân bay</p>
+                        <p>Khách sạn</p>
+                        <p>Địa điểm được quan tâm</p>
+                    </div>
+                    <div class="col-6 col-md-3 list-option">
+                        <p>Nhà</p>
+                        <p>Căn hộ</p>
+                        <p>Resort</p>
+                        <p>Biệt thự</p>
+                        <p>Nhà trọ</p>
+                        <p>Nhà nghỉ B&B</p>
+                        <p>Nhà khách</p>
+                    </div>
+                    <div class="col-6 col-md-3 list-option">
+                        <p>Những chỗ độc đáo</p>
+                        <p>Tất cả các điểm đến</p>
+                        <p>Khám phá</p>
+                        <p>Đánh giá của khách</p>
+                        <p>Các bài viết</p>
+                        <p> Ưu đãi theo mùa và dịp lễ</p>
+                    </div>
+                    <div class="col-6 col-md-3 list-option">
+                        <p>Cho thuê xe hơi</p>
+                        <p>Tìm chuyến bay</p>
+                        <p>Đặt nhà hàng</p>
+                        <p>Booking.com dành cho Đại Lý Du lịch</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h5 class="text-center hover-h5">Đăng nhập vào trang Extranet</h5>
+                <p>Bản quyền © 1996–2021 Booking.com™. Bảo lưu mọi quyền.</p>
+                <p class=" text-center ">Booking.com là một phần của Booking Holdings Inc., tập đoàn đứng đầu thế giới về du lịch trực tuyến và các dịch vụ liên quan.</p>
+                <div class=" row text-center ">
+                    <div class="col-0 col-xl-2 ">
+                    </div>
+                    <div class=" col-6 col-sm-3 col-md-2 col-xl-1 margin-bottom ">
+                        <img src="./Img/logobooking.com.png " alt=" ">
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2 margin-bottom ">
+                        <img src="./Img/logopriceline.com.png " alt=" ">
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-1 margin-bottom ">
+                        <img src="./Img/kayak.png " alt=" ">
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2 margin-bottom ">
+                        <img src="./Img/agoda.png " alt=" ">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 col-xl-1 margin-bottom ">
+                        <img src="./Img/rentalcars.com.png " alt=" ">
+                    </div>
+                    <div class=" col-6 col-sm-6 col-md-2 col-xl-2margin-bottom ">
+                        <img src="./Img/opentable.png " alt=" ">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- ------------------------------------------------modal currency--------------------------------------------------- -->
+    <div class="modal fade" id="currency" tabindex="-1" aria-labelledby="currencyLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 900px; width: 100%;">
+            <div class="modal-content currency">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="currencyLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container ">
+                        <div class="suggestion ">
+                            <h5 class="secion_modal ">Đề xuất cho bạn</h5>
+                            <div class="row text-black ">
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Việt Nam Đồng<br> VND
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la Mỹ<br> USD
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Euro<br>EUR
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Yên Nhật<br>JPY
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la Úc<br> AUD
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la ingapore<br>SGD
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all_currency ">
+                            <h5 class="secion_modal ">Tất cả loại tiền tệ</h5>
+                            <div class="row text-black ">
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Tiền tệ của chỗ nghỉ<br>€£$
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Bạt Thái<br>THB
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Bảng Ai Cập<br>EGP
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Bảng Anh<br>GBP
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Dirham UAE<br>AED
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Nhân Dân Tệ<br>CNY
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Rúp Nga<br>RUB
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Won Hàn Quốc<br>KRW
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la Mỹ <br> USD
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Euro<br>EUR
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Yên Nhật<br>JPY
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la Úc<br> AUD
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Đô la ingapore<br>SGD
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Rupee Ấn Độ<br>INR
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Riyal Qatar<br>QAR
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <input type="radio" name="currency"> Rupiah<br>IDR
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                    <button type="button" class="btn btn-primary">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------languages------------------------------------------ -->
+    <div class="modal fade" id="Country" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 900px; width: 100%; ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CountryLabel">Chọn loại tiền tệ của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="suggestion">
+                            <h5 class="secion_modal">Đề xuất cho bạn</h5>
+                            <div class="row text-black">
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country" src="./Img/Vietnam.png " alt="country"> Tiếng Việt
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/My.png " alt="country"> English (US)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Anh.png " alt="country"> English (UK)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Phap.png " alt="country"> Francais
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Hanquoc.png " alt="country"> Korean
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all_currency">
+                            <h5 class="secion_modal">Tất cả loại tiền tệ</h5>
+                            <div class="row text-black">
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country" src="./Img/Vietnam.png " alt="country"> Tiếng Việt
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country" src="./Img/My.png " alt="country"> English (US)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Anh.png " alt="country"> English (UK)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Phap.png " alt="country"> Francais
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Hanquoc.png " alt="country"> Korean
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Halan.png " alt="country"> Nederlands
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/peru.png " alt="country"> Espanol(MX)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/nhatban.png " alt="country"> Japanese
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/italia.png " alt="country"> Italiano
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Taybannha.png " alt="country"> Espanol
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/bodaonha.png " alt="country"> Portugues(PT)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/trungquoc.png " alt="country"> Chinese
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/acgentina.png " alt="country"> Espanol (AR)
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/Bỉ.png " alt="country"> Deutsch
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/brazin.png " alt="country"> Portugues
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/thuydien.png " alt="country"> Svenska
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/thúyy.png " alt="country"> Dansk
+                                </div>
+                                <div class=" col-6 col-sm-3 currency-1 ">
+                                    <img class="country " src="./Img/catala.png " alt="country"> Catalá
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                    <button type="button" class="btn btn-primary">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------sign up------------------------------------------------------>
+    <div class="modal fade" id="sign-up" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sign-uppLabel ">Đăng ký tài khoảng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h6>Địa chỉ email</h6>
+                        <input class="sign-up" type="email" placeholder="Nhập địa chỉ email của bạn" id="email" name="email">
+                        <h6>Mật khẩu email của bạn</h6>
+                        <input class="sign-up" type="password" id="pass" name="password" placeholder="Nhập mật email khẩu của bạn" required>
+                        <h6>Họ và tên</h6>
+                        <input class="sign-up" type="text" placeholder="Nhập họ tên của bạn">
+                        <h6>Mật khẩu</h6>
+                        <input class="sign-up" type="password" id="pass" name="password" placeholder="Nhập mật khẩu của bạn" required>
+                        <h6>Nhập lại mật khẩu</h6>
+                        <input class="sign-up" type="passwor" id="pass" name="password" placeholder="Nhập lại mật khẩu của bạn" required>
+                    </form>
+                    <div>
+                        <p class="text-black text-center Selection">
+                            hoặc sử dụng một trong các lựa chọn này
+                        </p>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Facebook" style="font-size: 160%;font-weight: 500;">
+                            <img class="social" src="./Img/facebook.png " alt="logo">
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Google" style="font-size: 160%;font-weight: 500;">
+                            <img class="social" src="./Img/google.png " alt="logo">
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Apple" style="font-size: 160%;font-weight: 500;">
+                            <img class="social" src="./Img/apple.png " alt="logo">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                    <button type="button" class="btn btn-primary">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------log in---------------------------------------------------- -->
+    <div class="modal fade" id="log_in" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="log_inLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <form>
+                        <h6>Địa chỉ email</h6>
+                        <input class="sign-up" type="email" placeholder="Nhập địa chỉ email của bạn" id="email" name="email">
+                        <h6>Mật khẩu của bạn</h6>
+                        <input class="sign-up" type="password" id="pass" name="password" placeholder="Nhập mật khẩu của bạn" required>
+                    </form>
+                    <div>
+                        <p class="text-black text-center Selection">
+                            hoặc sử dụng một trong các lựa chọn này
+                        </p>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Facebook " style="font-size: 160%;font-weight: 500; ">
+                            <img class="social" src="./Img/facebook.png " alt="logo">
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Google " style="font-size: 160%;font-weight: 500; ">
+                            <img class="social" src="./Img/google.png " alt="logo">
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg option " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đăng nhập bằng Apple " style="font-size: 160%;font-weight: 500; ">
+                            <img class="social" src="./Img/apple.png " alt="logo ">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                    <button type="button" class="btn btn-primary">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------JS--------------------------------------------- -->
+    <script src="./JS/tooltips.js "></script>
+    <script src="./JS/modal.js "></script>
+    <!-- <script src="./JS/announcements.js "></script> -->
+    <script src="./JS/searching_province.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr "></script>
+    <script>
+        flatpickr("#myID ", {
+            minDate: "today ",
+        });
+    </script>
+    <script src="./JS/number.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js " integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js " integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="./JS/slider.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.product .title {
+    color: black;
+    font-weight: 500;
+    background: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 140%;
+}
+
+.fas {
+    color: blue;
+}
+
+.col-10 {
+    padding-top: 8%;
+    /* margin-right: 10px; */
+}
+
+.col-2 {
+    background-color: rgb(193, 250, 231);
+}
+
+table {
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 10px 10px;
+}
+
+thead {
+    background: #f9f9f9;
+    display: table;
+    width: 100%;
+    /* width: calc(100% - 18px); */
+}
+
+tbody {
+    height: 600px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+}
+
+tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#product,
+#user,
+#bill,
+#cancalRooms {
+    display: none;
+}
+
+.color {
+    color: black;
+}
+
+.fa-eye {
+    color: rgb(248, 18, 68);
+}

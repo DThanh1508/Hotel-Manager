@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d1 = new Date();
+        var d2 = new Date('2022-01-01');
+        var d3 = new Date('2022-01-05');
+        if(d1.getDate() < d2.getDate()){
+            console.log('chưa nhận phòng');
+        }else if(d2.getDate()<=d1.getDate() && d1.getDate()<d3.getDate()){
+            console.log('đã nhận phòng');
+        }else{
+            console.log('đã trả phòng');
+        }
+        
+        console.log(d1)
+        console.log(d2)
+        console.log(d1 == d2);   // prints false (wrong!) 
+        console.log(d1 === d2);  // prints false (wrong!)
+        console.log(d1 != d2);   // prints true  (wrong!)
+        console.log(d1 !== d2);  // prints true  (wrong!)
+        console.log(d1.getDate() === d2.getDate()); // prints true (correct)
+    </script>
+</body>
+</html>

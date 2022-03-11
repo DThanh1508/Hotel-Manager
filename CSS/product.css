@@ -1,0 +1,51 @@
+#thunho {
+    width: auto;
+    height: 70px;
+}
+
+.form1 {
+    margin-left: 50px;
+}
+
+#add {
+    margin-right: 100px;
+    background-color: rgb(12, 201, 113);
+}
+
+#update {
+    background-color: rgb(238, 124, 89);
+}
+
+
+/* ---------- */
+
+.edit_delete {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    border: none;
+}
+
+.edit {
+    font-size: 22px;
+    color: red;
+}
+
+.delete {
+    font-size: 22px;
+    color: green;
+}
+
+.table {
+    margin-left: 50px;
+}
+
+#nav-heading {
+    /* color: white*/
+    font-size: 1rem;
+}
+
+.margin-right {
+    margin-right: 120px;
+}

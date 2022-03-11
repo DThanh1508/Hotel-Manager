@@ -1,0 +1,17 @@
+/* #tblhistory{
+    display: none;
+} */
+
+#nav-tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.colorbutton{
+    background-color: rgb(43, 116, 253)!important;
+    border-radius: 0%!important;
+}
+
+.coloractive{
+    background-color: rgb(13, 82, 209)!important;
+}

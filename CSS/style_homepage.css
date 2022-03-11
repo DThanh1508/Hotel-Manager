@@ -1,0 +1,654 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* -----------------------hearder---------------------------------- */
+
+.header {
+    background-color: #032b7c;
+}
+
+#idmenu {
+    margin-left: 210px;
+}
+
+.log {
+    border: 1px solid rgb(14, 96, 248);
+}
+
+.margin {
+    margin-top: 5px;
+}
+
+.country {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.fa-question-circle,.fa-user-circle {
+    font-size: 180%;
+}
+.fa-user-circle{
+    
+}
+.navbar-toggler {
+    font-size: 200%;
+    color: white;
+}
+
+.background-color:hover,
+.background-color:active {
+    background-color: #28437a;
+}
+
+.offcanvas-body button {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.offcanvas button {
+    margin-bottom: 5%;
+}
+
+#hearderResponsive{
+    display: none;
+}
+
+/* ---------------------------currency_and_country---------------------------- */
+
+.currency-1 {
+    margin-bottom: 15px;
+    font-size: 110%;
+    padding: 10px;
+    transition: all 1s;
+}
+.currency-1 input{
+    max-width: 10%;
+}
+
+.secion_modal {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.currency-1:hover,
+.currency-1:active {
+    background-color: rgb(197, 198, 199);
+}
+
+/* #postPlace{
+    margin-left: 7%;
+} */
+
+/* ---------------------Sign up----------------------------- */
+
+.sign-up {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.Selection {
+    margin-top: 20px;
+}
+
+.social {
+    width: 80px;
+}
+
+.option {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#buttonsignup,#otp{
+    display: none;
+}
+
+/* -------------------------- account management------------------------------------ */
+#accountmanagement{
+    font-size: 130%;
+    margin-left: 10%;
+    display: none;
+}
+
+.infor input{
+    width: 70%;
+}
+
+#updateinfor,#saveudate,#roommangement,#accountmangement{
+    display: none;
+}
+
+#infor{
+    margin-bottom: 10%;
+}
+
+.modal-body input{
+    width: 80%;
+}
+
+#acount_password{
+    display: none;
+}
+/* -------------------------------------------------Cartping----------------------------------------- */
+#cartping{
+    font-size: 200%;
+    display: none;
+}
+
+#cartping i{
+    font-size: 150%;
+}
+
+#quantity{
+    margin-top: 2%;
+    font-size: 50%;
+}
+.border{
+    border-radius: 0 !important;
+    width: 421.5px !important;
+    border: none !important;
+}
+/* -------------------------------------------------Main_menu---------------------------------------- */
+
+.button-boder {
+    border-radius: 25px;
+}
+
+.button-boder:hover,
+.button-boder:active {
+    background-color: #28437a;
+}
+
+.menu {
+    margin-right: 2%;
+    display: none;
+}
+
+@media screen and (max-width: 1199px) {
+    .menu {
+        padding: 2%;
+        display: block;
+    }
+}
+
+.nav-item-service {
+    list-style: none;
+    padding: 10px;
+    font-size: 130%;
+}
+
+.nav-item-service i {
+    margin-right: 5%;
+}
+
+.offcanvas-title {
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.nav-item-service:hover {
+    background-color: rgb(213, 215, 216);
+}
+
+
+/* -------------------------------------------Searching---------------------------------------------- */
+
+.Searching {
+    background-color: rgb(221, 222, 223);
+    padding: 50px;
+    border-bottom: 1px solid rgb(196, 195, 195);
+}
+
+.search-content-items {
+    justify-content: space-between;
+    background-color: rgb(255, 196, 0);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.search-content-item input {
+    border: none;
+    outline: none;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: white;
+}
+
+.addon-wrapping {
+    border: none;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    color: rgb(155, 157, 161);
+}
+
+.autobox {
+    position: absolute;
+    top: 100%;
+    background-color: hsl(0, 0%, 97%);
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgba(12, 11, 11, 0.1);
+    z-index: 100;
+}
+
+.autobox li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 1s;
+    display: none;
+}
+
+.autobox li:hover,
+.autobox li:active {
+    background-color: rgb(199, 201, 202);
+}
+
+.autobox.active li {
+    display: block;
+}
+
+.moneybox {
+    position: absolute;
+    top: 100%;
+    background-color: hsl(0, 0%, 97%);
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgba(12, 11, 11, 0.1);
+    z-index: 100;
+}
+
+.moneybox li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 1s;
+    display: none;
+}
+
+.moneybox.active li {
+    display: block;
+}
+
+
+/* -------------------------------------------style_date--------------------------------- */
+
+.flatpickr-months .flatpickr-month {
+    background-color: #032b7c!important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    background-color: #032b7c!important;
+}
+
+.flatpickr-weekdays {
+    background-color: #032b7c!important;
+}
+
+.flatpickr-weekday {
+    background-color: #032b7c!important;
+    color: rgb(243, 240, 240)!important;
+}
+
+.flatpickr-calender .arrowTop:after {
+    border-top-color: #032b7c!important;
+}
+
+.flatpickr-calender .arrowBottom:after {
+    border-top-color: #032b7c!important;
+}
+
+
+/* --------------------------------------------------number-people------------------------------------ */
+
+.number-people {
+    cursor: pointer;
+}
+
+.number-box li {
+    list-style: none;
+    justify-content: space-between;
+    padding: 25px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 1s;
+    display: none;
+}
+
+.number-box {
+    position: absolute;
+    top: 100%;
+    background-color: hsl(0, 0%, 97%);
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgba(12, 11, 11, 0.1);
+    z-index: 100;
+}
+
+#numer-people {
+    margin-bottom: 20px;
+}
+
+.number {
+    padding: 13px;
+}
+
+.number-box.active li {
+    display: block;
+}
+
+
+/* ---------------------------------------------------advice-------------------------------------- */
+
+.advice {
+    margin-top: 2%;
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.advice i {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 150%;
+    color: rgb(153, 53, 53);
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+
+/* -------------------------------------------------baner-------------------------------------------- */
+
+.baner {
+    margin-top: 3%;
+}
+
+.title {
+    font-size: 120%;
+    font-weight: 700;
+    float: left;
+}
+
+.btn-close {
+    float: right;
+}
+
+.baner1.active {
+    display: none;
+}
+
+.baner1 {
+    cursor: pointer;
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.close-baner {
+    cursor: pointer;
+}
+
+.baner2.active {
+    display: none;
+}
+
+.baner2 {
+    cursor: pointer;
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.close-baner2 {
+    cursor: pointer;
+}
+
+.padding-baner {
+    padding: 20px;
+}
+
+.baner3 {
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.baner3.active {
+    display: none;
+}
+
+.hoverbutton {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.hoverbutton:hover {
+    background-color: #e0e9fc;
+}
+
+.title3 {
+    margin-top: 5%;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.genius {
+    margin-top: 15%;
+}
+
+
+/* -----------------------------service--------------------------------- */
+
+.styleA{
+    text-decoration: none;
+    color: black;
+}
+
+.styleA:hover,
+.styleA:active{
+    color: black;
+}
+
+.service {
+    margin-top: 5%;
+}
+
+.service h1 {
+    margin-bottom: 2%;
+}
+
+.padding-items h5 {
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+.items {
+    width: 90%;
+}
+
+.items1 {
+    width: 80%;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #032b7c!important;
+}
+
+
+/* -------------------------------------prominent place------------------------------------ */
+
+.prominent-place {
+    margin-top: 5%;
+}
+
+.rounded {
+    border-radius: 10px;
+    filter: brightness(80%);
+    margin-bottom: 3%;
+}
+
+.carousel-caption {
+    color: #fbfbfb;
+    bottom: 10%;
+    display: block !important;
+}
+
+.carousel-item:hover .rounded,
+.carousel-item:active .rounded {
+    border: 1px solid yellow;
+}
+
+
+/* ---------------------------------------------favorite------------------------------------------------ */
+
+.marginTop {
+    margin-top: 5%;
+}
+
+.margin-h1 {
+    margin-bottom: 2%;
+}
+
+.color {
+    background-color: #032b7c!important;
+    border-bottom-left-radius: 0px!important;
+}
+
+.margin-p {
+    margin-top: 2%;
+    margin-bottom: -3%;
+}
+
+.margin-h6 {
+    margin-top: 3%;
+}
+
+.size {
+    width: 90%!important;
+    filter: brightness(60%);
+}
+
+.text {
+    top: 40%;
+    left: 5%;
+    font-size: 120%;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+    .text {
+        font-size: 80%;
+        font-weight: 500;
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 60%;
+        font-weight: 500;
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .text {
+        font-size: 40%;
+        bottom: 10%;
+    }
+}
+
+
+/* --------------------------address------------------------ */
+
+.hoverbutton {
+    margin-top: 0%;
+}
+
+#list-address {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.effect {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 600;
+    color: black;
+}
+
+.effect:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+
+/* -------------------------------------------log-in-email-------------------------------------- */
+
+.log-in-by-email {
+    background-color: #05225c;
+}
+
+.log-by-email {
+    padding: 2%;
+}
+
+.log-in-email {
+    font-size: 150%;
+    width: 35%;
+    margin-bottom: 1%;
+}
+
+.log-email {
+    margin-top: -1%;
+}
+
+#light {
+    border-bottom: 1px solid white;
+}
+
+.bottom {
+    margin-bottom: 2%;
+}
+
+#padding {
+    padding: 1%;
+}
+
+
+/* -------------------------------------------footer-------------------------------------- */
+
+.list-option p {
+    color: #0550e6;
+}
+
+.list-option p:hover {
+    color: #af620a;
+}
+
+.margin-bottom {
+    margin-bottom: 2%;
+}
+
+.hover-h5 {
+    font-weight: 700;
+    color: #0550e6;
+}
+
+.hover-h5:hover {
+    color: #af620a;
+}

@@ -1,0 +1,118 @@
+@media screen and (max-width: 428px) {
+    .header{
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+    #hearderResponsive{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo{
+        display: none;
+    }
+    #logo{
+        font-size: 176%;
+    }
+    .menu{
+        font-size: 150%;
+    }
+    .fa-th-large,.fa-bars{
+        padding: 15px;
+    }
+    .logo-padding{
+        padding: 10px;
+    }
+    /* -----------------------body---------------------------------------------- */
+    .space{
+        height: 80px;
+    }
+    h1{
+        font-size: 100%;
+        font-weight: 700;
+    }
+    h2{
+        font-size: 130%;
+        font-weight: 700;
+    }
+    p{
+        font-size: 90%;
+    }
+    /* ----------------------searching------------------------------------------- */
+    #search{
+        width: 100%;
+    }
+    .search-content-items{
+        width: 135%;
+        margin-left: -50px;
+    }
+    /* --------------------------baner-------------------------------------------- */
+    .advice{
+        display: none;
+    }
+    .col-baner1{
+        margin-bottom: 3%;
+    }
+    .title3{
+        font-size: 110%;
+    }
+    #title3{
+        font-size: 90%;
+    }
+
+    .genius{
+        width: 130%;
+    }
+    /* ------------------------------rooms---------------------------------------- */
+    .carousel-caption h1,.carousel-caption p{
+        font-size: 130%;
+    }
+
+    #text{
+        font-size: 200%;
+    }
+
+    a h5{
+        font-size: 98%;
+    }
+
+    .point{     
+        height: 78%;
+    }
+    /* ------------------------------address--------------------------------------- */
+    .hoverbutton, .effect{
+        font-size: 100%;
+    }
+
+    /* ------------------------------footer----------------------------------------- */
+    #emails{
+        width: 60%;
+        font-size: 120%;
+    }
+
+    .log-email{
+        margin-top: -8px;
+    }
+
+    #checkbox{
+        margin-top:20px ;
+    }
+
+    .footer-top{
+        background-color: #032b7c;
+    }
+
+    .bottom a{
+        font-size: 90%;
+    }
+    /* ----------------------------------modal log in------------------------------------------- */
+    .option{
+        width: 20%;
+    }
+    .social{
+        width: 100%;
+    }
+
+
+}

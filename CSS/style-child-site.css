@@ -1,0 +1,199 @@
+/* ----------------------------------------------Hearder------------------------------------------- */
+.fa-cart-arrow-down{
+    font-size: 180%;
+}
+/* ----------------------------------------------search-------------------------------------------- */
+
+.question-buttom {
+    font-size: 95%;
+    margin-top: 3%;
+}
+
+#question-left {
+    margin-left: 27.5%;
+}
+
+.search-room {
+    background-color: rgb(255, 196, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ------------------------Top--------------------------- */
+
+.map {
+    background-image: url(../Img/background.PNG);
+    height: 100%;
+}
+
+#map {
+    margin-top: 15%;
+}
+
+.margin-top {
+    margin-top: 5%;
+}
+
+.Top {
+    border-bottom: 1px solid black;
+}
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+.btn-group>.btn:nth-child(n+3),
+.btn-group>:not(.btn-check)+.btn {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.btn-group {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.box {
+    position: absolute;
+    top: 100%;
+    left: -55%;
+    background-color: hsl(0, 24%, 96%);
+    width: 220%;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgba(12, 11, 11, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+.box li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 1s;
+    color: black;
+}
+
+.box li:hover {
+    background-color: rgb(210, 213, 216);
+}
+
+.activebox {
+    display: block;
+}
+
+
+/* -----------------------------------------------------------products--------------------------------------- */
+
+.rim {
+    border: 1px solid rgb(161, 159, 159);
+    width: 100%;
+    margin-left: 0.1%;
+    margin-top: 2%;
+}
+
+.item {
+    position: relative;
+    padding: 8%;
+}
+
+.fa-heart {
+    font-size: 150%;
+    position: absolute;
+    transform: translate(740%, -850%);
+    color: rgb(59, 58, 58);
+}
+
+.pink {
+    color: rgb(241, 32, 95);
+}
+
+.tranfrom {
+    position: absolute;
+    transform: translate(540%, -580%);
+    display: none;
+}
+
+.add {
+    display: block;
+}
+
+.comment i {
+    color: rgb(255, 196, 0);
+    float: right;
+}
+
+.float {
+    float: left;
+}
+
+.comment {
+    margin-right: 20%;
+}
+
+.link a {
+    margin-right: 3%;
+}
+
+.link p {
+    margin-top: 1%;
+}
+
+.effect2 {
+    text-decoration: none;
+    color: black;
+}
+
+.price-display {
+    margin-left: 27%;
+    margin-top: 3%;
+    border-radius: 0%;
+}
+
+.baner-maring {
+    margin-top: 2%;
+}
+
+
+/* ----------------------------------------------------checkbox--------------------------------- */
+
+.border-padding {
+    border-top: 1px solid rgb(177, 174, 174);
+}
+
+.select-by {
+    border: 1px solid rgb(177, 174, 174);
+    margin-top: 5%;
+}
+
+.padding-border {
+    padding: 4%;
+}
+
+.fa-angle-down {
+    color: #032b7c;
+    font-size: 80%;
+}
+
+.colo {
+    color: #032b7c;
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.fa-angle-up {
+    color: #032b7c;
+    font-size: 80%;
+}
+
+.colo:active {
+    border: 0%;
+}
+
+.map-size {
+    height: 200px;
+}
+
+.none {
+    display: none;
+}
